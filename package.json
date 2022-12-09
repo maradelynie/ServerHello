@@ -1,0 +1,45 @@
+{
+  "name": "ntask-node",
+  "version": "1.0.0",
+  "description": "rest api for to do lists",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run apidoc && npm run clusters",
+    "server": "node index.js",
+    "clusters": "node clusters.js",
+    "apidoc": "apidoc -i routes/ -o public/apidoc",
+    "test": "SET AMBIENT=test&& mocha test/**/*.js"
+  },
+  "apidoc": {
+    "name": "Documentação - Node Task API",
+    "template": {
+      "forceLanguage": "pt_br"
+    }
+  },
+  "author": "Mara <maradelynie@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "install": "^0.13.0",
+    "jwt-simple": "^0.5.6",
+    "morgan": "^1.10.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^6.21.3",
+    "sqlite3": "^5.0.11",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.52.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.4"
+  }
+}
